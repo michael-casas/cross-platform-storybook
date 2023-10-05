@@ -1,5 +1,5 @@
 {
-  "name": "reanimated-storybook",
+  "name": "@org/source",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -26,6 +26,7 @@
     "expo": "^49.0.0",
     "expo-splash-screen": "~0.20.4",
     "expo-status-bar": "~1.6.0",
+    "nativewind": "^2.0.11",
     "next": "13.4.1",
     "next-transpile-modules": "^10.0.0",
     "raf": "^3.4.1",

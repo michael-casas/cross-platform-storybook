@@ -20,7 +20,7 @@ const AnimatedCircleComponent = () => {
 
   const props = useAnimatedProps(() => {
     return { fill: fill.value };
-  });
+  }, [fill]);
 
   const style = useAnimatedStyle(() => {
     const x = circleRadius * Math.cos(2 * Math.PI * progress.value);
@@ -29,7 +29,7 @@ const AnimatedCircleComponent = () => {
     return {
       transform: [{ translateX: x }, { translateY: y }],
     };
-  });
+  }, [progress]);
 
   useEffect(() => {
     progress.value = withTiming(
@@ -54,7 +54,7 @@ const AnimatedCircleComponent = () => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [fill, progress]);
 
   return (
     <Animated.View style={style}>
@@ -67,8 +67,8 @@ const AnimatedCircleComponent = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: window.innerHeight,
-    width: window.innerWidth,
+    height: 500,
+    width: 800,
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: Constants.statusBarHeight,

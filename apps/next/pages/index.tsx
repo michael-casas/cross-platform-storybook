@@ -1,6 +1,7 @@
 import { AnimationCircle } from '@org/ui';
+import { View } from 'react-native';
 
-export function Index() {
+export default function Index() {
   /*
    * Replace the elements below with your own.
    *
@@ -8,5 +9,3 @@ export function Index() {
    */
   return <AnimationCircle />;
 }
-
-export default Index;

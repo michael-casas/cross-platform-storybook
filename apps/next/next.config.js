@@ -17,6 +17,8 @@ const nextConfig = {
   reactStrictMode: false,
   transpilePackages: [
     'expo',
+    'expo-constants',
+    'expo-modules-core',
     'react-native',
     'react-native-web',
     'react-native-reanimated',
